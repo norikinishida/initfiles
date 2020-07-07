@@ -1,0 +1,5 @@
+set hintchars=0123456789abcdefghijklmnopqrstuvwxyz
+hi Hint font-family: monospace; font-size: 21px; font-weight: bold; text-transform: uppercace; color: white; background-color: red; border-color: ButtonShadow; border-width: 0px; border-style: solid; padding: 0px 1px 0px 1px;
+noremap j 5j
+noremap k 5k
+nnoremap <C-r> :restart<CR>

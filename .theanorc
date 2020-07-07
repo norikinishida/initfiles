@@ -1,0 +1,15 @@
+[cuda]
+root = /usr/local/cuda-8.0
+
+[global]
+device = gpu0
+floatX = float32
+allow_gc = True
+mode=FAST_RUN
+
+
+[blas]
+ldflags = -lopenblas
+
+[dnn]
+enabled = True
