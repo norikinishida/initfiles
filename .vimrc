@@ -501,6 +501,10 @@ NeoBundle 'mattn/emmet-vim'
 " Add MacPorts support to vim
 NeoBundle 'https://svn.macports.org/repository/macports/contrib/mpvim/'
 
+" JSON用
+NeoBundle 'elzr/vim-json'
+let g:vim_json_syntax_conceal = 0
+
 "--------------------------
 call neobundle#end()
 
