@@ -116,47 +116,39 @@ endif
 syntax enable
 set t_Co=256
 
-" let g:solarized_termcolors=16
-" let g:solarized_termtrans=1
-" let g:solarized_degrade=0
-" let g:solarized_bold=1
-" let g:solarized_underline=1
-" let g:solarized_italic=1
-" let g:solarized_contrast="normal"
-" let g:solarized_visibility="normal"
-" " グレー (ノーマル)
+let g:solarized_termcolors=16
+let g:solarized_termtrans=0
+let g:solarized_degrade=0
+let g:solarized_bold=1
+let g:solarized_underline=1
+let g:solarized_italic=1
+let g:solarized_contrast="high"
+let g:solarized_visibility="normal"
+
+" " ノーマル
 " autocmd ColorScheme * highlight Normal ctermfg=248
 " autocmd ColorScheme * highlight Search ctermfg=244
-" " autocmd ColorScheme * highlight CursorLineNr ctermfg=248
-" " 黄色 (型とか)
+" " 型
 " autocmd ColorScheme * highlight Type ctermfg=172
-" " オレンジ (文とか)
-" " autocmd ColorScheme * highlight PreProc ctermfg=202
-" " autocmd ColorScheme * highlight Special ctermfg=202
-" " autocmd ColorScheme * highlight Statement ctermfg=202
-" autocmd ColorScheme * highlight PreProc ctermfg=166
-" autocmd ColorScheme * highlight Special ctermfg=166
-" autocmd ColorScheme * highlight Statement ctermfg=166
-" " 青1 (識別子とか)
+" " 識別子
 " autocmd ColorScheme * highlight Identifier ctermfg=33
 " autocmd ColorScheme * highlight StorageClass ctermfg=33
 " autocmd ColorScheme * highlight texStatement ctermfg=33
-" " 青2 (定数とか)
-" " autocmd ColorScheme * highlight Constant ctermfg=30
+" " 定数
 " autocmd ColorScheme * highlight Constant ctermfg=31
-" " コメント (紫)
-" autocmd ColorScheme * highlight Comment ctermfg=131
-" " 暗めのグレー (その他のサブ情報)
+" " キーワード (e.g., 'import', 'def', 'class', for', 'if')
+" autocmd ColorScheme * highlight PreProc ctermfg=166
+" autocmd ColorScheme * highlight Special ctermfg=166
+" autocmd ColorScheme * highlight Statement ctermfg=166
+" " コメント
+autocmd ColorScheme * highlight Comment ctermfg=208
+" " 行番号
 " autocmd ColorScheme * highlight LineNr ctermfg=242
 " autocmd ColorScheme * highlight LineNr ctermbg=none
-" " ピンク (TODO, NOTEとか)
-" autocmd ColorScheme * highlight Todo ctermfg=198
-" colorscheme solarized
+" " TODO, FIXME とか
+autocmd ColorScheme * highlight Todo ctermfg=198
 
-"colorscheme jellybeans
-
-packadd! dracula
-colorscheme dracula
+colorscheme solarized
 
 "******************************************************************************
 "挿入モードをステートラインの色で判別できるようにする
