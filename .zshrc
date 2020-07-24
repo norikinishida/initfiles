@@ -71,12 +71,12 @@ fi
 ###############################################################
 # プロンプト関係
 
-local p_info="%B%F{166}%n@%m${WINDOW:+"[$WINDOW]"}%f%b" # norikinishida@norikinishida-pcの部分
-local p_cdir="%B%F{166}[%~]%f%b" # ディレクトリの部分
+local p_info="%B%F{208}%n@%m${WINDOW:+"[$WINDOW]"}%f%b" # norikinishida@norikinishida-pcの部分
+local p_cdir="%B%F{208}[%~]%f%b" # ディレクトリの部分
 # if [[ -n "${REMOTEHOST}${SSH_CONNECTION}" ]]; then
 #     p_info="%B%F{134}%n@%m${WINDOW:+"[$WINDOW]"}%f%b" # ssh時のnorikinishida@norikinishida-pcの部分 (紫)
 # fi
-local p_mask="%B%(?,%F{166},%F{196})%(!,#,>>>)%f%b" # 矢印の部分
+local p_mask="%B%(?,%F{208},%F{160})%(!,#,$)%f%b" # 矢印の部分
 PROMPT="$p_info $p_cdir
 $p_mask "
 
@@ -123,15 +123,14 @@ export TERM=xterm-256color
 source $HOME/env36/bin/activate
 
 # my own libraries
-export PYTHONPATH=$HOME/Dropbox/commandline_utils_py:$PYTHONPATH
+export PYTHONPATH=$HOME/Dropbox/projects/library/commandline_utils_py:$PYTHONPATH
 export PYTHONPATH=$HOME/Dropbox/projects/library/utils:$PYTHONPATH
 export PYTHONPATH=$HOME/Dropbox/projects/library/treetk:$PYTHONPATH
 export PYTHONPATH=$HOME/Dropbox/projects/library/textpreprocessor:$PYTHONPATH
 export PYTHONPATH=$HOME/Dropbox/projects/library/dimensionreduction:$PYTHONPATH
 export PYTHONPATH=$HOME/Dropbox/projects/library/clustering:$PYTHONPATH
 export PYTHONPATH=$HOME/Dropbox/projects/library/visualizers:$PYTHONPATH
-export PYTHONPATH=$HOME/Dropbox/projects/library/corpus_reader:$PYTHONPATH
-export PYTHONPATH=$HOME/Dropbox/projects/library/gmailsender:$PYTHONPATH
+export PATH=$HOME/Dropbox/projects/library/gdrive/personal:$PATH
 
 # CUDA
 export CUDA_ROOT=/usr/local/cuda
