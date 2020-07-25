@@ -71,7 +71,7 @@ fi
 ###############################################################
 # プロンプト関係
 
-local p_info="%F{green}%n@%m [%~]%f" # username@hostname
+local p_info="%F{green}%n@%m%f %F{yellow}[%d]%f %F{cyan}%*%f" # username@hostname
 local p_mark="%(?,%F{blue},%F{red})%(!,#,$)%f"
 PROMPT="$p_info
 $p_mark "
