@@ -51,7 +51,7 @@ zplug load --verbose
 
 # 補完
 autoload -U compinit
-compinit
+compinit -u
 
 # その他補完
 setopt auto_param_keys
@@ -71,14 +71,10 @@ fi
 ###############################################################
 # プロンプト関係
 
-local p_info="%B%F{208}%n@%m${WINDOW:+"[$WINDOW]"}%f%b" # norikinishida@norikinishida-pcの部分
-local p_cdir="%B%F{208}[%~]%f%b" # ディレクトリの部分
-# if [[ -n "${REMOTEHOST}${SSH_CONNECTION}" ]]; then
-#     p_info="%B%F{134}%n@%m${WINDOW:+"[$WINDOW]"}%f%b" # ssh時のnorikinishida@norikinishida-pcの部分 (紫)
-# fi
-local p_mask="%B%(?,%F{208},%F{160})%(!,#,$)%f%b" # 矢印の部分
-PROMPT="$p_info $p_cdir
-$p_mask "
+local p_info="%F{green}%n@%m [%~]%f" # username@hostname
+local p_mark="%(?,%F{blue},%F{red})%(!,#,$)%f"
+PROMPT="$p_info
+$p_mark "
 
 #############################################################
 # その他
