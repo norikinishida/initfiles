@@ -497,6 +497,10 @@ NeoBundle 'https://svn.macports.org/repository/macports/contrib/mpvim/'
 NeoBundle 'elzr/vim-json'
 let g:vim_json_syntax_conceal = 0
 
+" TypeScript
+NeoBundle 'leadgarland/typescript-vim'
+autocmd BufRead,BufNewFile *.ts set filetype=typescript
+
 "--------------------------
 call neobundle#end()
 
