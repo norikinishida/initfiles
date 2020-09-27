@@ -498,7 +498,7 @@ NeoBundle 'elzr/vim-json'
 let g:vim_json_syntax_conceal = 0
 
 " TypeScript
-NeoBundle 'leadgarland/typescript-vim'
+NeoBundle 'leafgarland/typescript-vim'
 autocmd BufRead,BufNewFile *.ts set filetype=typescript
 
 "--------------------------
