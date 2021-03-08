@@ -110,6 +110,7 @@ alias stats_files="python -m stats_files"
 alias rename_files="python -m rename_files"
 alias copy_files="python -m copy_files"
 alias safe_mv="python -m safe_mv"
+alias tably="python -m tably"
 
 #############################################################
 # 環境変数
