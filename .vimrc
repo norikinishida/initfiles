@@ -125,26 +125,6 @@ let g:solarized_italic=1
 let g:solarized_contrast="high"
 let g:solarized_visibility="normal"
 
-" " ノーマル
-" autocmd ColorScheme * highlight Normal ctermfg=248
-" autocmd ColorScheme * highlight Search ctermfg=244
-" " 型
-" autocmd ColorScheme * highlight Type ctermfg=172
-" " 識別子
-" autocmd ColorScheme * highlight Identifier ctermfg=33
-" autocmd ColorScheme * highlight StorageClass ctermfg=33
-" autocmd ColorScheme * highlight texStatement ctermfg=33
-" " 定数
-" autocmd ColorScheme * highlight Constant ctermfg=31
-" " キーワード (e.g., 'import', 'def', 'class', for', 'if')
-" autocmd ColorScheme * highlight PreProc ctermfg=166
-" autocmd ColorScheme * highlight Special ctermfg=166
-" autocmd ColorScheme * highlight Statement ctermfg=166
-" " コメント
-autocmd ColorScheme * highlight Comment ctermfg=208
-" " 行番号
-" autocmd ColorScheme * highlight LineNr ctermfg=242
-" autocmd ColorScheme * highlight LineNr ctermbg=none
 " " TODO, FIXME とか
 autocmd ColorScheme * highlight Todo ctermfg=198
 
