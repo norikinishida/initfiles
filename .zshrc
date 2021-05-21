@@ -11,8 +11,8 @@ eval "`dircolors -b`"
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
-# ls(grepも?)の色付け(solarized)
-eval $(dircolors $HOME/software/dircolors-solarized/dircolors.256dark)
+# ls(grepも?)の色付け(オリジナル; cobaltベース)
+eval $(dircolors $HOME/Dropbox/initfiles/dircolors.256dark)
 
 # コマンドライン入力文字色の変更(109はvimのNormalの色)
 zle_highlight=(default:fg=#8D9898)
@@ -71,8 +71,9 @@ fi
 ###############################################################
 # プロンプト関係
 
-local p_info="%F{green}%n@%m%f %F{yellow}[%d]%f %F{cyan}%*%f" # username@hostname
-local p_mark="%(?,%F{blue},%F{red})%(!,#,$)%f"
+#local p_info="%F{green}%n@%m%f %F{yellow}[%d]%f %F{cyan}%*%f" # username@hostname
+local p_info="%F{blue}%n@%m%f %F{blue}[%d]%f" # username@hostname
+local p_mark="%(?,%F{yellow},%F{red})%(!,#,$)%f"
 PROMPT="$p_info
 $p_mark "
 
