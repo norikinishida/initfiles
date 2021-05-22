@@ -135,8 +135,7 @@ colorscheme cobalt
 "挿入モードをステートラインの色で判別できるようにする
 
 if !exists('g:hi_insert')
-    let g:hi_insert= 'highlight StatusLine guifg=White guibg=DarkCyan gui=none ctermfg=White ctermbg=DarkCyan cterm=none'
-    " let g:hi_insert= 'highlight StatusLine guifg=White guibg=33 gui=none ctermfg=White ctermbg=33 cterm=none'
+    let g:hi_insert= 'highlight StatusLine guifg=white guibg=black gui=none ctermfg=33 ctermbg=234 cterm=none'
 endif
 
 "if has('unix') && !has('gui_running')
