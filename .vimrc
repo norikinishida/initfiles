@@ -127,6 +127,7 @@ set t_Co=256
 
 " TODO, FIXME とか
 " autocmd ColorScheme * highlight Todo ctermfg=198
+autocmd ColorScheme * highlight IncSearch ctermbg=197
 
 " colorscheme solarized
 colorscheme cobalt
@@ -380,6 +381,7 @@ NeoBundle "Yggdroot/indentLine"
 " \textbf{}や\textit{}がバグるから*.texだけ無効にする
 let g:indentLine_fileTypeExclude = ["tex"]
 " let g:indentLine_setConceal = 0
+let g:indentLine_color_term = 238
 
 " インデントの可視化 (代替)
 " NeoBundle 'nathanaelkane/vim-indent-guides'
