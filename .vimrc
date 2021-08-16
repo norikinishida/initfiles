@@ -102,6 +102,7 @@ set nobackup "バックアップファイル"~"なし
 " set list "不可視文字を表示する
 set autoread
 " set synmaxcol=180
+set completeopt=menuone "補完のポップアップの制御
 
 "******************************************************************************
 " Source a global configuration file if available
@@ -294,6 +295,9 @@ cmap bblock r!cat ~/.vim/mybeamertemplate_block.tex
 cmap bfigure r!cat ~/.vim/mybeamertemplate_figure.tex
 cmap btable r!cat ~/.vim/mybeamertemplate_table.tex
 cmap bcols r!cat ~/.vim/mybeamertemplate_columns.tex
+
+" Pythonのdocstring自動補完
+cmap pydoc r!cat ~/.vim/docstringtemplate.txt
 
 "******************************************************************************
 "vundle プラグイン管理
