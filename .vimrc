@@ -132,6 +132,9 @@ autocmd ColorScheme * highlight IncSearch ctermbg=197
 " colorscheme solarized
 colorscheme cobalt
 
+" *.edu.txt.depにJSONファイルの言語シンタックスを適用
+autocmd BufNewFile,BufRead *.edu.txt.dep set filetype=json
+
 "******************************************************************************
 "挿入モードをステートラインの色で判別できるようにする
 
