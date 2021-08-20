@@ -98,6 +98,7 @@ alias v="vim"
 alias p="python"
 alias e="evince"
 
+alias l="ls"
 alias lsl="ls -xtrlh"
 alias dudh="du -d1 -h ."
 alias count_files="ls -U | wc -l"
