@@ -124,6 +124,7 @@ export TERM=xterm-256color
 source $HOME/env36/bin/activate
 
 # my own libraries
+export PATH=$HOME/Dropbox/projects/library/gdrive/personal:$PATH
 export PYTHONPATH=$HOME/Dropbox/projects/library/commandline_utils_py:$PYTHONPATH
 export PYTHONPATH=$HOME/Dropbox/projects/library/utils:$PYTHONPATH
 export PYTHONPATH=$HOME/Dropbox/projects/library/treetk:$PYTHONPATH
@@ -131,7 +132,6 @@ export PYTHONPATH=$HOME/Dropbox/projects/library/textpreprocessor:$PYTHONPATH
 export PYTHONPATH=$HOME/Dropbox/projects/library/dimensionreduction:$PYTHONPATH
 export PYTHONPATH=$HOME/Dropbox/projects/library/clustering:$PYTHONPATH
 export PYTHONPATH=$HOME/Dropbox/projects/library/visualizers:$PYTHONPATH
-export PATH=$HOME/Dropbox/projects/library/gdrive/personal:$PATH
 
 # CUDA
 export CUDA_ROOT=/usr/local/cuda
