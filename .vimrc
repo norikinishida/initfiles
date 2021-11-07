@@ -130,11 +130,10 @@ set t_Co=256
 " autocmd ColorScheme * highlight Todo ctermfg=198
 autocmd ColorScheme * highlight IncSearch ctermbg=197
 
-" colorscheme solarized
-colorscheme cobalt
+" colorscheme cobalt
 
 " *.edu.txt.depにJSONファイルの言語シンタックスを適用
-autocmd BufNewFile,BufRead *.edu.txt.dep set filetype=json
+autocmd BufNewFile,BufRead *.dep set filetype=json
 
 "******************************************************************************
 "挿入モードをステートラインの色で判別できるようにする
@@ -308,11 +307,13 @@ filetype off                   " required!
 if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim
 endif
+
 call neobundle#begin(expand('/home/norikinishida/.vim/bundle/'))
+"--------------------------
 
 " インストールするプラグイン
 NeoBundleFetch 'Shougo/neobundle.vim' "NeoBundle自身
-"--------------------------
+
 " VimShell
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/vimshell'
@@ -506,3 +507,24 @@ NeoBundleCheck "未インストールのプラグインがある場合，イン�
 "
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle command are not allowed..
+
+"******************************************************************************
+" vim-plugによるプラグイン管理
+
+call plug#begin()
+"--------------------------
+
+Plug 'ayu-theme/ayu-vim'
+
+"--------------------------
+call plug#end()
+
+" ayuの設定は、vim-plug以降に行う
+set termguicolors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+let ayucolor="dark"
+colorscheme ayu
+
+
+
