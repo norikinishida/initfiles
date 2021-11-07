@@ -51,7 +51,7 @@ if has("autocmd")
 endif
 
 "******************************************************************************
-"基本設定
+" 基本設定
 
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
@@ -106,13 +106,14 @@ set completeopt=menuone "補完のポップアップの制御
 
 "******************************************************************************
 " Source a global configuration file if available
+
 if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
 
 "******************************************************************************
-"カラースキーム
-"
+" カラースキーム
+
 
 syntax enable
 set t_Co=256
@@ -130,13 +131,13 @@ set t_Co=256
 " autocmd ColorScheme * highlight Todo ctermfg=198
 autocmd ColorScheme * highlight IncSearch ctermbg=197
 
-" colorscheme cobalt
+colorscheme cobalt
 
 " *.edu.txt.depにJSONファイルの言語シンタックスを適用
 autocmd BufNewFile,BufRead *.dep set filetype=json
 
 "******************************************************************************
-"挿入モードをステートラインの色で判別できるようにする
+" 挿入モードをステートラインの色で判別できるようにする
 
 if !exists('g:hi_insert')
     let g:hi_insert= 'highlight StatusLine guifg=white guibg=black gui=none ctermfg=33 ctermbg=234 cterm=none'
@@ -217,7 +218,7 @@ endfunction
 command! SyntaxInfo call s:get_syn_info()
 
 "******************************************************************************
-"エンコードとか文字環境まわり
+" エンコードとか文字環境まわり
 
 set termencoding=utf-8
 set encoding=utf-8
@@ -267,7 +268,7 @@ inoremap <C-Down> <Esc>gT
 autocmd filetype python :set makeprg=python\ %
 
 "******************************************************************************
-"Go言語設定
+" Go言語設定
 
 if $GOROOT != ''
     set rtp+=$GOROOT/misc/vim
@@ -299,7 +300,7 @@ cmap bcols r!cat ~/.vim/mybeamertemplate_columns.tex
 cmap pydoc r!cat ~/.vim/docstringtemplate.txt
 
 "******************************************************************************
-"vundle プラグイン管理
+" vundle プラグイン管理
 
 set nocompatible               " be iMproved
 filetype off                   " required!
@@ -310,8 +311,8 @@ endif
 
 call neobundle#begin(expand('/home/norikinishida/.vim/bundle/'))
 "--------------------------
-
 " インストールするプラグイン
+
 NeoBundleFetch 'Shougo/neobundle.vim' "NeoBundle自身
 
 " VimShell
@@ -520,11 +521,11 @@ Plug 'ayu-theme/ayu-vim'
 call plug#end()
 
 " ayuの設定は、vim-plug以降に行う
-set termguicolors
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-let ayucolor="dark"
-colorscheme ayu
+" set termguicolors
+" let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+" let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+" let ayucolor="dark"
+" colorscheme ayu
 
 
 
