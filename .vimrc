@@ -130,7 +130,8 @@ set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
-colorscheme cobalt
+" colorscheme cobalt
+colorscheme customized-cobalt
 
 " TODO, FIXME とか
 " autocmd ColorScheme * highlight Todo ctermfg=198
@@ -524,11 +525,7 @@ Plug 'ayu-theme/ayu-vim'
 call plug#end()
 
 " ayuの設定は、vim-plug以降に行う
-" set termguicolors
-" let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-" let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 " let ayucolor="dark"
 " colorscheme ayu
-
 
 
