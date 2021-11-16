@@ -144,7 +144,7 @@ autocmd BufNewFile,BufRead *.dep set filetype=json
 " 挿入モードをステートラインの色で判別できるようにする
 
 if !exists('g:hi_insert')
-    let g:hi_insert= 'highlight StatusLine guifg=white guibg=black gui=none ctermfg=33 ctermbg=234 cterm=none'
+    let g:hi_insert= 'highlight StatusLine guifg=#0088ff guibg=#25272e gui=none ctermfg=33 ctermbg=234 cterm=none'
 endif
 
 "if has('unix') && !has('gui_running')

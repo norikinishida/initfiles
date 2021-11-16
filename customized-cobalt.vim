@@ -15,6 +15,7 @@ let g:colors_name = "cobalt"
 "hi CTagsGlobalConstant -- no settings --
 "hi Ignore -- no settings --
 " hi Normal guifg=#ffffff guibg=#001b33 guisp=#001b33 gui=bold ctermfg=15 ctermbg=233 cterm=bold
+" 背景色をayu-darkに寄せる
 hi Normal guifg=#ffffff guibg=#0d1017 guisp=#001b33 gui=bold ctermfg=15 ctermbg=233 cterm=bold
 "hi CTagsImport -- no settings --
 "hi CTagsGlobalVariable -- no settings --
@@ -58,7 +59,8 @@ hi Todo guifg=#ffdd00 guibg=#000000 guisp=#000000 gui=NONE ctermfg=220 ctermbg=N
 hi Special guifg=#c526ff guibg=NONE guisp=NONE gui=bold ctermfg=13 ctermbg=NONE cterm=bold
 hi LineNr guifg=#ffe4cc guibg=NONE guisp=NONE gui=NONE ctermfg=224 ctermbg=NONE cterm=NONE
 " hi StatusLine guifg=#ffffff guibg=#000000 guisp=#000000 gui=bold ctermfg=15 ctermbg=NONE cterm=bold
-hi StatusLine guifg=#ffffff guibg=#000000 guisp=#000000 gui=bold ctermfg=15 ctermbg=234 cterm=bold
+" ステータスラインの背景色はayu-darkの背景力よりも少し薄いくらいに
+hi StatusLine guifg=#ffffff guibg=#25272e guisp=#000000 gui=bold ctermfg=15 ctermbg=234 cterm=bold
 hi Label guifg=#ff9d00 guibg=NONE guisp=NONE gui=bold ctermfg=214 ctermbg=NONE cterm=bold
 hi PMenuSel guifg=#ffffff guibg=#0088ff guisp=#0088ff gui=NONE ctermfg=15 ctermbg=33 cterm=NONE
 hi Search guifg=#ffffff guibg=#0088ff guisp=#0088ff gui=NONE ctermfg=15 ctermbg=33 cterm=NONE
