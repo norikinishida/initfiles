@@ -51,6 +51,13 @@ if has("autocmd")
 endif
 
 "******************************************************************************
+" Source a global configuration file if available
+
+if filereadable("/etc/vim/vimrc.local")
+  source /etc/vim/vimrc.local
+endif
+
+"******************************************************************************
 " 基本設定
 
 " The following are commented out as they cause vim to behave a lot
@@ -105,15 +112,7 @@ set autoread
 set completeopt=menuone "補完のポップアップの制御
 
 "******************************************************************************
-" Source a global configuration file if available
-
-if filereadable("/etc/vim/vimrc.local")
-  source /etc/vim/vimrc.local
-endif
-
-"******************************************************************************
 " カラースキーム
-
 
 syntax enable
 set t_Co=256
@@ -127,11 +126,15 @@ set t_Co=256
 " let g:solarized_contrast="high"
 " let g:solarized_visibility="normal"
 
+set termguicolors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+colorscheme cobalt
+
 " TODO, FIXME とか
 " autocmd ColorScheme * highlight Todo ctermfg=198
 autocmd ColorScheme * highlight IncSearch ctermbg=197
-
-colorscheme cobalt
 
 " *.edu.txt.depにJSONファイルの言語シンタックスを適用
 autocmd BufNewFile,BufRead *.dep set filetype=json

@@ -1,32 +1,4 @@
 ##############################################################
-# 色関係
-
-# 色
-autoload -U colors
-colors
-
-# ls, grepの色付け(自動)
-eval "`dircolors -b`"
-# alias ls='ls -xtr --color=auto'
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-
-# ls(grepも?)の色付け(オリジナル; cobaltベース)
-eval $(dircolors $HOME/Dropbox/initfiles/dircolors.256dark)
-
-# コマンドライン入力文字色の変更(109はvimのNormalの色)
-zle_highlight=(default:fg=#8D9898)
-
-# 色一覧の表示
-function 256colortest() {
-    local code
-    for code in {0..256}; do
-        echo -n -e "\e[38;05;${code}m $code"
-    done
-    echo ""
-}
-
-##############################################################
 # プラグイン
 
 # zplug
@@ -45,6 +17,39 @@ if ! zplug check --verbose; then
 fi
 
 zplug load --verbose
+
+##############################################################
+# 色関係
+
+# 色
+autoload -U colors
+colors
+
+# ls, grepの色付け(自動)
+eval "`dircolors -b`"
+# alias ls='ls -xtr --color=auto'
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+
+# ls(grepも?)の色付け(オリジナル; cobaltベース)
+eval $(dircolors $HOME/Dropbox/initfiles/dircolors.256dark)
+
+# コマンドライン入力文字色の変更
+zle_highlight=(default:fg=#8D9898)
+
+export TERM=xterm-256color
+
+# 色一覧の表示
+function 256colortest() {
+    local code
+    for code in {0..256}; do
+        echo -n -e "\e[38;05;${code}m $code"
+    done
+    echo ""
+}
+
+# True Colorのグラデーションの表示
+alias showtruecolor="curl -s https://gist.githubusercontent.com/lifepillar/09a44b8cf0f9397465614e622979107f/raw/24-bit-color.sh | bash"
 
 ##############################################################
 # 補完関係
@@ -117,14 +122,10 @@ alias tably="python -m tably"
 #############################################################
 # 環境変数
 
-# xterm color
-export TERM=xterm-256color
-
 # virtualenv
 source $HOME/env36/bin/activate
 
 # my own libraries
-export PATH=$HOME/Dropbox/projects/library/gdrive/personal:$PATH
 export PYTHONPATH=$HOME/Dropbox/projects/library/commandline_utils_py:$PYTHONPATH
 export PYTHONPATH=$HOME/Dropbox/projects/library/utils:$PYTHONPATH
 export PYTHONPATH=$HOME/Dropbox/projects/library/treetk:$PYTHONPATH
@@ -132,6 +133,7 @@ export PYTHONPATH=$HOME/Dropbox/projects/library/textpreprocessor:$PYTHONPATH
 export PYTHONPATH=$HOME/Dropbox/projects/library/dimensionreduction:$PYTHONPATH
 export PYTHONPATH=$HOME/Dropbox/projects/library/clustering:$PYTHONPATH
 export PYTHONPATH=$HOME/Dropbox/projects/library/visualizers:$PYTHONPATH
+export PATH=$HOME/Dropbox/projects/library/gdrive/personal:$PATH
 
 # CUDA
 export CUDA_ROOT=/usr/local/cuda
