@@ -31,11 +31,13 @@ eval "`dircolors -b`"
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
-# ls(grepも?)の色付け(オリジナル; cobaltベース)
-eval $(dircolors $HOME/Dropbox/initfiles/dircolors.256dark)
+# ls(grepも?)の色付け
+# eval $(dircolors $HOME/Dropbox/initfiles/customized-cobalt.dircolors) # customized-cobalt
+eval $(dircolors $HOME/Dropbox/initfiles/onedark.dircolors) # onedark
 
 # コマンドライン入力文字色の変更
-zle_highlight=(default:fg=#8D9898)
+# zle_highlight=(default:fg=#8D9898) # customized-cobalt
+zle_highlight=(default:fg=#ABB2BF) # onedark
 
 export TERM=xterm-256color
 
