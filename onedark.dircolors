@@ -94,11 +94,11 @@ TERM xterm-termite
 
 ## Special files
 
-NORMAL 00;38;5;7 # no color code at all
+NORMAL 00;38;5;145 # no color code at all
 #FILE 00 # regular file: use no color at all
 RESET 0 # reset to "normal" color
-DIR 00;38;5;4 # directory 01;34
-LINK 00;38;5;6 # symbolic link. (If you set this to 'target' instead of a
+DIR 00;38;5;39 # directory 01;34
+LINK 00;38;5;38 # symbolic link. (If you set this to 'target' instead of a
  # numerical value, the color is as for the file pointed to.)
 MULTIHARDLINK 00 # TODO regular file with more than one link
 FIFO 48;5;230;38;5;136;01 # TODO pipe
@@ -111,112 +111,112 @@ SETUID 48;5;160;38;5;230 # TODO file that is setuid (u+s)
 SETGID 48;5;136;38;5;230 # TODO file that is setgid (g+s)
 CAPABILITY 30;41 # file with capability
 STICKY_OTHER_WRITABLE 48;5;64;38;5;230 # TODO dir that is sticky and other-writable (+t,o+w)
-OTHER_WRITABLE 48;5;8;38;5;4 # dir that is other-writable (o+w) and not sticky
+OTHER_WRITABLE 48;5;8;38;5;39 # dir that is other-writable (o+w) and not sticky
 STICKY 48;5;33;38;5;230 # TODO dir with the sticky bit set (+t) and not other-writable
 # This is for files with execute permission:
-EXEC 00;38;5;2
+EXEC 00;38;5;114
 
 ## Archives or compressed (violet + bold for compression)
-.tar    00;38;5;5
-.tgz    00;38;5;5
-.arj    00;38;5;5
-.taz    00;38;5;5
-.lzh    00;38;5;5
-.lzma   00;38;5;5
-.tlz    00;38;5;5
-.txz    00;38;5;5
-.zip    00;38;5;5
-.z      00;38;5;5
-.Z      00;38;5;5
-.dz     00;38;5;5
-.gz     00;38;5;5
-.lz     00;38;5;5
-.xz     00;38;5;5
-.bz2    00;38;5;5
-.bz     00;38;5;5
-.tbz    00;38;5;5
-.tbz2   00;38;5;5
-.tz     00;38;5;5
-.deb    00;38;5;5
-.rpm    00;38;5;5
-.jar    00;38;5;5
-.rar    00;38;5;5
-.ace    00;38;5;5
-.zoo    00;38;5;5
-.cpio   00;38;5;5
-.7z     00;38;5;5
-.rz     00;38;5;5
-.apk    00;38;5;5
-.gem    00;38;5;5
+.tar    00;38;5;170
+.tgz    00;38;5;170
+.arj    00;38;5;170
+.taz    00;38;5;170
+.lzh    00;38;5;170
+.lzma   00;38;5;170
+.tlz    00;38;5;170
+.txz    00;38;5;170
+.zip    00;38;5;170
+.z      00;38;5;170
+.Z      00;38;5;170
+.dz     00;38;5;170
+.gz     00;38;5;170
+.lz     00;38;5;170
+.xz     00;38;5;170
+.bz2    00;38;5;170
+.bz     00;38;5;170
+.tbz    00;38;5;170
+.tbz2   00;38;5;170
+.tz     00;38;5;170
+.deb    00;38;5;170
+.rpm    00;38;5;170
+.jar    00;38;5;170
+.rar    00;38;5;170
+.ace    00;38;5;170
+.zoo    00;38;5;170
+.cpio   00;38;5;170
+.7z     00;38;5;170
+.rz     00;38;5;170
+.apk    00;38;5;170
+.gem    00;38;5;170
 
 # Image formats (yellow)
-.jpg    00;38;5;3
-.JPG    00;38;5;3 #stupid but needed
-.jpeg   00;38;5;3
-.gif    00;38;5;3
-.bmp    00;38;5;3
-.pbm    00;38;5;3
-.pgm    00;38;5;3
-.ppm    00;38;5;3
-.tga    00;38;5;3
-.xbm    00;38;5;3
-.xpm    00;38;5;3
-.tif    00;38;5;3
-.tiff   00;38;5;3
-.png    00;38;5;3
-.PNG    00;38;5;3
-.svg    00;38;5;3
-.svgz   00;38;5;3
-.mng    00;38;5;3
-.pcx    00;38;5;3
-.dl     00;38;5;3
-.xcf    00;38;5;3
-.xwd    00;38;5;3
-.yuv    00;38;5;3
-.cgm    00;38;5;3
-.emf    00;38;5;3
-.eps    00;38;5;3
-.CR2    00;38;5;3
-.ico    00;38;5;3
-.nef    00;38;5;3 # Nikon RAW format
-.NEF    00;38;5;3
+.jpg    00;38;5;180
+.JPG    00;38;5;180 #stupid but needed
+.jpeg   00;38;5;180
+.gif    00;38;5;180
+.bmp    00;38;5;180
+.pbm    00;38;5;180
+.pgm    00;38;5;180
+.ppm    00;38;5;180
+.tga    00;38;5;180
+.xbm    00;38;5;180
+.xpm    00;38;5;180
+.tif    00;38;5;180
+.tiff   00;38;5;180
+.png    00;38;5;180
+.PNG    00;38;5;180
+.svg    00;38;5;180
+.svgz   00;38;5;180
+.mng    00;38;5;180
+.pcx    00;38;5;180
+.dl     00;38;5;180
+.xcf    00;38;5;180
+.xwd    00;38;5;180
+.yuv    00;38;5;180
+.cgm    00;38;5;180
+.emf    00;38;5;180
+.eps    00;38;5;180
+.CR2    00;38;5;180
+.ico    00;38;5;180
+.nef    00;38;5;180 # Nikon RAW format
+.NEF    00;38;5;180
 
 # Files of special interest (base1)
-.tex             00;38;5;7
-.rdf             00;38;5;7
-.owl             00;38;5;7
-.n3              00;38;5;7
-.ttl             00;38;5;7
-.nt              00;38;5;7
-.torrent         00;38;5;7
-.xml             00;38;5;7
-*Makefile        00;38;5;7
-*Rakefile        00;38;5;7
-*Dockerfile      00;38;5;7
-*build.xml       00;38;5;7
-*rc              00;38;5;7
-*1               00;38;5;7
-.nfo             00;38;5;7
-*README          00;38;5;7
-*README.txt      00;38;5;7
-*readme.txt      00;38;5;7
-.md              00;38;5;7
-*README.markdown 00;38;5;7
-.ini             00;38;5;7
-.yml             00;38;5;7
-.cfg             00;38;5;7
-.conf            00;38;5;7
-.h               00;38;5;7
-.hpp             00;38;5;7
-.c               00;38;5;7
-.cpp             00;38;5;7
-.cxx             00;38;5;7
-.cc              00;38;5;7
-.objc            00;38;5;7
-.sqlite          00;38;5;7
-.go              00;38;5;7
-.sql             00;38;5;7
-.csv             00;38;5;7
+.tex             00;38;5;145
+.rdf             00;38;5;145
+.owl             00;38;5;145
+.n3              00;38;5;145
+.ttl             00;38;5;145
+.nt              00;38;5;145
+.torrent         00;38;5;145
+.xml             00;38;5;145
+*Makefile        00;38;5;145
+*Rakefile        00;38;5;145
+*Dockerfile      00;38;5;145
+*build.xml       00;38;5;145
+*rc              00;38;5;145
+*1               00;38;5;145
+.nfo             00;38;5;145
+*README          00;38;5;145
+*README.txt      00;38;5;145
+*readme.txt      00;38;5;145
+.md              00;38;5;145
+*README.markdown 00;38;5;145
+.ini             00;38;5;145
+.yml             00;38;5;145
+.cfg             00;38;5;145
+.conf            00;38;5;145
+.h               00;38;5;145
+.hpp             00;38;5;145
+.c               00;38;5;145
+.cpp             00;38;5;145
+.cxx             00;38;5;145
+.cc              00;38;5;145
+.objc            00;38;5;145
+.sqlite          00;38;5;145
+.go              00;38;5;145
+.sql             00;38;5;145
+.csv             00;38;5;145
 
 # "unimportant" files as logs and backups (base01)
 .log        00;38;5;101
@@ -242,55 +242,55 @@ EXEC 00;38;5;2
 .cache      00;38;5;101
 
 # Audio formats (orange)
-.aac    00;38;5;3
-.au     00;38;5;3
-.flac   00;38;5;3
-.mid    00;38;5;3
-.midi   00;38;5;3
-.mka    00;38;5;3
-.mp3    00;38;5;3
-.mpc    00;38;5;3
-.ogg    00;38;5;3
-.opus   00;38;5;3
-.ra     00;38;5;3
-.wav    00;38;5;3
-.m4a    00;38;5;3
+.aac    00;38;5;173
+.au     00;38;5;173
+.flac   00;38;5;173
+.mid    00;38;5;173
+.midi   00;38;5;173
+.mka    00;38;5;173
+.mp3    00;38;5;173
+.mpc    00;38;5;173
+.ogg    00;38;5;173
+.opus   00;38;5;173
+.ra     00;38;5;173
+.wav    00;38;5;173
+.m4a    00;38;5;173
 # http://wiki.xiph.org/index.php/MIME_Types_and_File_Extensions
-.axa    00;38;5;3
-.oga    00;38;5;3
-.spx    00;38;5;3
-.xspf   00;38;5;3
+.axa    00;38;5;173
+.oga    00;38;5;173
+.spx    00;38;5;173
+.xspf   00;38;5;173
 
 # Video formats (as audio + bold)
-.mov    00;38;5;3
-.MOV    00;38;5;3
-.mpg    00;38;5;3
-.mpeg   00;38;5;3
-.m2v    00;38;5;3
-.mkv    00;38;5;3
-.ogm    00;38;5;3
-.mp4    00;38;5;3
-.m4v    00;38;5;3
-.mp4v   00;38;5;3
-.vob    00;38;5;3
-.qt     00;38;5;3
-.nuv    00;38;5;3
-.wmv    00;38;5;3
-.asf    00;38;5;3
-.rm     00;38;5;3
-.rmvb   00;38;5;3
-.flc    00;38;5;3
-.avi    00;38;5;3
-.fli    00;38;5;3
-.flv    00;38;5;3
-.gl     00;38;5;3
-.m2ts   00;38;5;3
-.divx   00;38;5;3
-.webm   00;38;5;3
+.mov    00;38;5;173
+.MOV    00;38;5;173
+.mpg    00;38;5;173
+.mpeg   00;38;5;173
+.m2v    00;38;5;173
+.mkv    00;38;5;173
+.ogm    00;38;5;173
+.mp4    00;38;5;173
+.m4v    00;38;5;173
+.mp4v   00;38;5;173
+.vob    00;38;5;173
+.qt     00;38;5;173
+.nuv    00;38;5;173
+.wmv    00;38;5;173
+.asf    00;38;5;173
+.rm     00;38;5;173
+.rmvb   00;38;5;173
+.flc    00;38;5;173
+.avi    00;38;5;173
+.fli    00;38;5;173
+.flv    00;38;5;173
+.gl     00;38;5;173
+.m2ts   00;38;5;173
+.divx   00;38;5;173
+.webm   00;38;5;173
 # http://wiki.xiph.org/index.php/MIME_Types_and_File_Extensions
-.axv 00;38;5;3
-.anx 00;38;5;3
-.ogv 00;38;5;3
-.ogx 00;38;5;3
+.axv 00;38;5;173
+.anx 00;38;5;173
+.ogv 00;38;5;173
+.ogx 00;38;5;173
 
 
