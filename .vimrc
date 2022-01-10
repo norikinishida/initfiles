@@ -149,6 +149,7 @@ if (empty($TMUX))
     endif
 endif
 let g:onedark_termcolors=256
+autocmd ColorScheme * highlight Include ctermfg=170 guifg=#C678DD
 colorscheme onedark
 
 " TODO, FIXME とか
