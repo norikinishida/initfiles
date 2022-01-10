@@ -94,7 +94,8 @@ TERM xterm-termite
 
 ## Special files
 
-NORMAL 00;38;5;145 # no color code at all
+# NORMAL 00;38;5;145 # no color code at all
+NORMAL 00;38;5;251 # no color code at all
 #FILE 00 # regular file: use no color at all
 RESET 0 # reset to "normal" color
 DIR 00;38;5;39 # directory 01;34
