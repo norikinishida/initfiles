@@ -318,6 +318,7 @@ cmap bblock r!cat ~/.vim/mybeamertemplate_block.tex
 cmap bfigure r!cat ~/.vim/mybeamertemplate_figure.tex
 cmap btable r!cat ~/.vim/mybeamertemplate_table.tex
 cmap bcols r!cat ~/.vim/mybeamertemplate_columns.tex
+cmap bexe r!cat ~/.vim/mybeamertemplate_exe.tex
 
 " Pythonのdocstring自動補完
 cmap pydoc r!cat ~/.vim/docstringtemplate.txt
