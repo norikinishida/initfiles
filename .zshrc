@@ -78,9 +78,14 @@ fi
 ###############################################################
 # プロンプト関係
 
-#local p_info="%F{green}%n@%m%f %F{yellow}[%d]%f %F{cyan}%*%f" # username@hostname
-local p_info="%F{blue}%n@%m%f %F{blue}[%d]%f" # username@hostname
-local p_mark="%(?,%F{yellow},%F{red})%(!,#,$)%f"
+# local p_info="%F{114}%n@%m%f %F{180}[%d]%f %F{38}%*%f" # username@hostname [path]
+# local p_info="%F{39}%n@%m%f %F{39}[%d]%f" # username@hostname [path]
+if [ -n "$SSH_CONNECTION" ]; then
+    local p_info="%F{38}[SSH]%f %F{39}%n@%m:%d%f" # username@hostname:path
+else
+    local p_info="%F{39}%n@%m:%d%f" # username@hostname:path
+fi
+local p_mark="%(?,%F{180},%F{204})%(!,#,$)%f"
 PROMPT="$p_info
 $p_mark "
 
@@ -146,19 +151,20 @@ export DYLD_LIBRARY_PATH=/usr/local/cuda/lib:$DYLD_LIBRARY_PATH
 export CUDA_PATH=/usr/local/cuda:$CUDA_PATH
 
 # Stanford CoreNLP
-export CLASSPATH=$HOME/software/stanford-corenlp/stanford-corenlp-full-2018-10-05/stanford-corenlp-3.9.2.jar:$CLASSPATH
-export CLASSPATH=$HOME/software/stanford-corenlp/stanford-corenlp-full-2018-10-05/stanford-corenlp-3.9.2-models.jar:$CLASSPATH
-export CLASSPATH=$HOME/software/stanford-corenlp/stanford-corenlp-full-2018-10-05/ejml-0.23.jar:$CLASSPATH
-export CLASSPATH=$HOME/software/stanford-corenlp/stanford-corenlp-full-2018-10-05/javax.activation-api-1.2.0.jar:$CLASSPATH
-export CLASSPATH=$HOME/software/stanford-corenlp/stanford-corenlp-full-2018-10-05/javax.json.jar:$CLASSPATH
-export CLASSPATH=$HOME/software/stanford-corenlp/stanford-corenlp-full-2018-10-05/jaxb-core-2.3.0.1.jar:$CLASSPATH
-export CLASSPATH=$HOME/software/stanford-corenlp/stanford-corenlp-full-2018-10-05/jaxb-impl-2.4.0-b180830.0438.jar:$CLASSPATH
-export CLASSPATH=$HOME/software/stanford-corenlp/stanford-corenlp-full-2018-10-05/joda-time.jar:$CLASSPATH
-export CLASSPATH=$HOME/software/stanford-corenlp/stanford-corenlp-full-2018-10-05/jollyday.jar:$CLASSPATH
-export CLASSPATH=$HOME/software/stanford-corenlp/stanford-corenlp-full-2018-10-05/protobuf.jar:$CLASSPATH
-export CLASSPATH=$HOME/software/stanford-corenlp/stanford-corenlp-full-2018-10-05/slf4j-api.jar:$CLASSPATH
-export CLASSPATH=$HOME/software/stanford-corenlp/stanford-corenlp-full-2018-10-05/slf4j-simple.jar:$CLASSPATH
-export CLASSPATH=$HOME/software/stanford-corenlp/stanford-corenlp-full-2018-10-05/xom.jar:$CLASSPATH
+export CLASSPATH=$HOME/software/stanford-corenlp/stanford-corenlp-latest/stanford-corenlp-4.4.0/*:$CLASSPATH
+# export CLASSPATH=$HOME/software/stanford-corenlp/stanford-corenlp-latest/stanford-corenlp-4.4.0/stanford-corenlp-3.9.2.jar:$CLASSPATH
+# export CLASSPATH=$HOME/software/stanford-corenlp/stanford-corenlp-latest/stanford-corenlp-4.4.0/stanford-corenlp-3.9.2-models.jar:$CLASSPATH
+# export CLASSPATH=$HOME/software/stanford-corenlp/stanford-corenlp-latest/stanford-corenlp-4.4.0/ejml-0.23.jar:$CLASSPATH
+# export CLASSPATH=$HOME/software/stanford-corenlp/stanford-corenlp-latest/stanford-corenlp-4.4.0/javax.activation-api-1.2.0.jar:$CLASSPATH
+# export CLASSPATH=$HOME/software/stanford-corenlp/stanford-corenlp-latest/stanford-corenlp-4.4.0/javax.json.jar:$CLASSPATH
+# export CLASSPATH=$HOME/software/stanford-corenlp/stanford-corenlp-latest/stanford-corenlp-4.4.0/jaxb-core-2.3.0.1.jar:$CLASSPATH
+# export CLASSPATH=$HOME/software/stanford-corenlp/stanford-corenlp-latest/stanford-corenlp-4.4.0/jaxb-impl-2.4.0-b180830.0438.jar:$CLASSPATH
+# export CLASSPATH=$HOME/software/stanford-corenlp/stanford-corenlp-latest/stanford-corenlp-4.4.0/joda-time.jar:$CLASSPATH
+# export CLASSPATH=$HOME/software/stanford-corenlp/stanford-corenlp-latest/stanford-corenlp-4.4.0/jollyday.jar:$CLASSPATH
+# export CLASSPATH=$HOME/software/stanford-corenlp/stanford-corenlp-latest/stanford-corenlp-4.4.0/protobuf.jar:$CLASSPATH
+# export CLASSPATH=$HOME/software/stanford-corenlp/stanford-corenlp-latest/stanford-corenlp-4.4.0/slf4j-api.jar:$CLASSPATH
+# export CLASSPATH=$HOME/software/stanford-corenlp/stanford-corenlp-latest/stanford-corenlp-4.4.0/slf4j-simple.jar:$CLASSPATH
+# export CLASSPATH=$HOME/software/stanford-corenlp/stanford-corenlp-latest/stanford-corenlp-4.4.0/xom.jar:$CLASSPATH
 
 # Stanford POS Tagger
 export CLASSPATH=$HOME/software/stanford-postagger/stanford-postagger-2018-10-16/stanford-postagger.jar:$CLASSPATH
@@ -169,10 +175,6 @@ export CLASSPATH=$HOME/software/stanford-parser/stanford-parser-full-2018-10-17/
 export CLASSPATH=$HOME/software/stanford-parser/stanford-parser-full-2018-10-17/stanford-parser-3.9.2-models.jar:$CLASSPATH
 export CLASSPATH=$HOME/software/stanford-parser/stanford-parser-full-2018-10-17/ejml-0.23.jar:$CLASSPATH
 export CLASSPATH=$HOME/software/stanford-parser/stanford-parser-full-2018-10-17/slf4j-api.jar:$CLASSPATH
-
-# DyNet
-export PATH_TO_DYNET=/home/norikinishida/software/dynet-base/dynet/
-export PATH_TO_EIGEN=/home/norikinishida/software/dynet-base/eigen/
 
 # WordNet
 export PATH=/usr/local/WordNet-3.0/bin:$PATH
